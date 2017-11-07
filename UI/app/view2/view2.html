@@ -1,5 +1,28 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div ng-app ="myApp.view2">
+<div class="container">
+    <h3>Edit Person</h3>
+    <form ng-submit="UpdateData()">
+	<div class="form-group well">
+        <label for="firstName">ID</label>
+        <input type="text" class="form-control" name="id" ng-model="id" required >
+      </div>
+      <div class="form-group well">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" name="firstName" ng-model="firstName" required >
+      </div>
+ 
+      <div class="form-group well">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" name="lastName" ng-model="lastName" required>
+      </div>
+
+	<div class="form-group well">
+        <label for="jobTitle">Job Title</label>
+        <input type="text" class="form-control" name="jobTitle" ng-model="jobTitle" required>
+      </div>
+ 
+      <input type="submit" class="btn btn-primary" value="Submit" />
+
+    </form>
+</div>
+</div>

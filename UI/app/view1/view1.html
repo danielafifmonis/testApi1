@@ -1,1 +1,18 @@
-<p>This is the partial for view 1.</p>
+<div class="table-responsive">
+<div class="container">
+<div ng-app ="myApp.view1">
+<table class="table table-striped table-bordered table-hover">    
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Job Title</th>
+       </tr>    
+       <tr ng-repeat="p in people">
+           <td><a href="#!/view2">{{p.firstName}}</td>
+           <td>{{p.lastName}}</td>
+           <td>{{p.jobTitle}}</td>
+       </tr>
+</table>
+</div>
+</div>
+</div>

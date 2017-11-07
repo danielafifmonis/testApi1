@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TestApi1.Models.Person>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>People</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Job Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                @*<td>@Html.ActionLink(person.FirstName, "PersonsDetails", "Person", new {id=person.Id }, null)</td>*@                
+                <td>@Html.ActionLink(person.FirstName, "EditPerson", "Person", new { id = person.Id }, null)</td>
+                <td>@person.LastName</td>
+                <td>@person.JobTitle</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

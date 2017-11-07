@@ -1,0 +1,27 @@
+﻿@model TestApi1.Models.Person
+@{
+    ViewBag.Title = "PersonForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Person</h2>
+
+@using (Html.BeginForm("Save", "Person"))
+{
+    <div class="form-group">
+        @Html.LabelFor(p => p.FirstName)
+        @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.LastName)
+        @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.JobTitle)
+        @Html.TextBoxFor(p => p.JobTitle, new {@class = "form-control"})
+    </div>
+   
+    @Html.HiddenFor(p => p.Id)
+    <button type = "submit" class="btn btn-primary">Save</button>
+}
+
